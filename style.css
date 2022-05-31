@@ -23,6 +23,9 @@ body {
     justify-content: center;
     z-index: 1;
     background-color: white;
+    box-shadow: 0px 0.5em 0.5em rgba(132, 18, 75, 0.262);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 }
 
 nav {
@@ -93,12 +96,14 @@ a {
 }
 
 .second-container {
-    width: 90%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     z-index: 5;
+    transform: translateZ(100px) scale(0.66);
 }
 
 .box {
@@ -107,7 +112,7 @@ a {
     background-color: white;
     margin: 5% 2.5% 5% 2.5%;
     border-radius: 0.5rem;
-    box-shadow: 1px 2px 0.5em rgb(173, 173, 173);
+    box-shadow: 0px 0px 0.7em #364f6bdd;
     display: grid;
     grid-template-rows: 50% 50%;
 }
@@ -115,7 +120,7 @@ a {
 .box > .img {
     width: 100%;
     height: 100%;
-    background-color: #FFB6B9;
+    background-color: #61C0BF;
     justify-self: center;
     align-self: center;
     border-top-left-radius: inherit;
@@ -128,8 +133,7 @@ a {
     width: 110%;
     height: 110%;
     border-radius: inherit;
-    box-shadow: 1px 1px 0.5em rgb(132, 18, 75);
-    background-color: #FFB6B9;
+    box-shadow: 1px 1px 0.5em #364F6B;
 }
 
 .box > .text {
@@ -158,7 +162,7 @@ a {
 .third {
     position: relative;
     transform-style: preserve-3d;
-    height: 70vh;
+    height: 100vh;
     z-index: -1;
     display: flex;
     justify-content: center;
@@ -183,13 +187,13 @@ a {
 .third-container {
     position: absolute;
     inset: 0;
-    transform: translateZ(-300px) scale(2);
+    transform: translateZ(-600px) scale(3);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(#ffdedf, #FFB6B9);
-    box-shadow: 1px 2px 0.5em rgb(173, 173, 173);
+    background: linear-gradient(#fcc4c4, #d9b5b6);
+    box-shadow: 1px 2px 0.5em rgb(248, 234, 234);
     overflow: hidden;
 }
 
