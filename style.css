@@ -19,17 +19,20 @@ body {
     align-items: center;
     justify-content: left;
     z-index: 1;
-    background: linear-gradient(to bottom right, rgba(195, 232, 242, 0.85), rgba(212, 212, 212, 0.3));
+    background: linear-gradient(to bottom right, rgba(178, 232, 247, 0.95), rgba(177, 167, 244, 0.369));
     backdrop-filter: blur(1em);
     box-shadow: 0px 25px 1.5em rgba(120, 67, 94, 0.6);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
+    position: relative;
+    transform-style: preserve-3d;
 }
 
 .introduction-text {
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 5%;
+    position: absolute;
 }
 
 .introduction-text > h3 {
@@ -57,34 +60,35 @@ body {
     margin-bottom: 5%;
 }
 
-/* .float-container {
-    width: 100%;
-    height: 100%;
+.second {
+    position: relative;
+    transform-style: preserve-3d;
+    /* height: 100vh; */
+    min-height: 100vh;
+    z-index: -1;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    z-index: 5;
-    transform: translateZ(100px) scale(0.66);
-    background: transparent;
-    backdrop-filter: blur(1000rem);
-} */
+}
 
 .box {
     width: 300px;
     height: 450px;
     background: linear-gradient(to top right, rgba(193, 225, 234, 0.85), rgba(212, 212, 212, 0.5));
-    margin: 5% 2.5% 5% 2.5%;
     border-radius: 0.5rem;
     box-shadow: 0px 0px 0.7em #364f6bdd;
     display: grid;
     grid-template-rows: 50% 50%;
     backdrop-filter: blur(0.7rem);
+    transition: 0.1s;
+    transform: translateZ(110px) scale(0.66);
 }
 
 .box > .img {
-    width: 270px;
-    height: 195px;
+    width: 90%;
+    height: 90%;
     background-color: #61C0BF;
     justify-self: center;
     align-self: center;
@@ -123,26 +127,14 @@ body {
     text-align: center;
 }
 
-.second {
-    position: relative;
-    transform-style: preserve-3d;
-    /* height: 100vh; */
-    min-height: 100vh;
-    z-index: -1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
 .second-container {
     position: absolute;
     inset: 0;
-    transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3) translateY(-15%);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
-    height: 100%;
+    height: 200vh;
     background: linear-gradient(#fcc4c4, #d9b5b6);
     box-shadow: 1px 2px 0.5em rgb(248, 234, 234);
     overflow: hidden;
@@ -152,7 +144,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     animation: animateup 40s infinite alternate;
 }
 
@@ -182,7 +174,7 @@ body {
 
 @keyframes animateup {
     100%{
-        transform: translateY(-70%);
+        transform: translateY(-50%);
     }
 }
 
